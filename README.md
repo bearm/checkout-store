@@ -1,4 +1,4 @@
-# :moneybag: Checkout Store Solution
+# :moneybag: Checkout Store Solution :moneybag:
 
 ## :memo: Problem to solve: 
 Various departments have insisted on the following discounts:
