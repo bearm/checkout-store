@@ -10,17 +10,12 @@ Checkout process allows for items to be scanned in any order, and should return 
 
 ## :computer: Stack used:
 
-* Vanilla JavaScript.
-* [Sass](http://sass-lang.com/)
+* ES6 JavaScript.
 * [Gulp](https://gulpjs.com/)
 * [Karma](https://karma-runner.github.io/1.0/index.html)
 * [Mocha](https://mochajs.org/")
 * [Chai](http://chaijs.com/)
 
-## :wrench: Build
+## :wrench: How to
 1. **npm install**
-2. **gulp build** (executes the css and js task to generate the bundles)
-
-## :white_check_mark: Tests
-Unit testing can be find under the app/tests folder. Here you can find the command to execute them:
-**./node_modules/karma/bin/karma start**
+2. **npm run test** (to check the correct working of the app)
