@@ -10,7 +10,11 @@ Checkout process allows for items to be scanned in any order, and should return 
 
 ## :computer: Solution:
 
-The checkout class only has to function, scan and total, the constructor receives a JSON that ideally should come from an API, and should be created by an admin panel etc.
+The checkout class only has to function, scan and total, the constructor receives a JSON that ideally:
+ * Should come from an API
+ * Requested with some promise in the checkout constructor
+ * And created by an admin panel or something.
+
 There is a "deal" file where there are declared all the deals that are currently available: this also should go in separated files if we want them to be called independently in any file, and the deals variable should only declare the array importing the functions.
 
 ## :computer: Stack used:
