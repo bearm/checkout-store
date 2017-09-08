@@ -15,9 +15,7 @@ The checkout class only has two functions, scan and total, the constructor recei
  * Requested with some promise in the checkout constructor
  * And created by an admin panel or something.
 
-And uses the deal variable where al the deal functions are assigned.
-
-The "deal" file where there are declared all the deals that are currently available could or should go in separated files if we want them to be called independently in any file, and the deals variable should only declare the array importing the functions.
+And uses the deal variable where al the deal functions are assigned, each deal should be declared independently so they can be reused along the project if this gets bigger.
 
 ## :computer: Stack used:
 

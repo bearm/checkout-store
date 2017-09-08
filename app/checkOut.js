@@ -7,15 +7,16 @@ class Checkout {
         this.pricingRules = pricingRules
         this.scanned = new Map()
     }
-
+    get items(){
+        return this.scanned
+    }
     scan(item) {
-        if (!this.pricingRules.some(product => product.code === item)) {
-            throw new Error("Product doesn't exists")
-        }
-        if (this.scanned.has(item)) {
-            this.scanned.set(item, this.scanned.get(item) + 1)
-        } else {
-            this.scanned.set(item, 1)
+        if (this.pricingRules.some(product => product.code === item)) {
+            if (this.scanned.has(item)) {
+                this.scanned.set(item, this.scanned.get(item) + 1)
+            } else {
+                this.scanned.set(item, 1)
+            }
         }
         return this
     }

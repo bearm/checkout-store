@@ -17,9 +17,9 @@ describe('Testing checkout', () => {
     });
 
     describe('Scan', () => {
-        it("Should throw an exception if the product doesnt matches any pricing rules", () => {
-            var err = new Error("Product doesn't exists")
-            checkout.scan("GLASSES").should.throw(err)
+        it("Nothing should be added if the product doesnt matches any pricing rules", () => {
+            checkout.scan("GLASSES")
+            checkout.scanned.size.should.equal(0)
         })
         it("Should add a new item to the 'scanned' variable with value 1 if is not already in the array", () => {
             checkout.scan("VOUCHER")
