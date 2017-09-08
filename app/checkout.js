@@ -25,7 +25,6 @@ class Checkout {
         for (let [item, totalItems] of this.scanned.entries()) {
             var product = this.pricingRules.find(product => product.code === item);
             if (product.deal != null){
-                console.log(product.deal);
                 total += deals[product.deal](product.dealProperties, totalItems)
             }else{
                 total += product.price * totalItems
