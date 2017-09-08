@@ -9,7 +9,7 @@ const buyTake = ({price, take, buy} = {}, total) => {
     return total * price;
 }
 
-const bulk = ({price, limit, bulkPrice} = {}, total) =>  {
+const bulk = ({price, limit, bulkPrice} = {}, total) => {
     if (total >= limit) {
         return total * bulkPrice
     }
@@ -17,8 +17,8 @@ const bulk = ({price, limit, bulkPrice} = {}, total) =>  {
 }
 
 const Deals = {
-    "buyTake" : buyTake,
-    "bulk" : bulk
+    "buyTake": buyTake,
+    "bulk": bulk
 }
 
 module.exports = Deals;

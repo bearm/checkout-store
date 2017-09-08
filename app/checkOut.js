@@ -9,24 +9,24 @@ class Checkout {
     }
 
     scan(item) {
-        if (!this.pricingRules.some(product => product.code === item)) {
+        if (!this.pricingRules.some(product => product.code === item)) {
             throw new Error("Product doesn't exists")
         }
-        if (this.scanned.has(item)){
+        if (this.scanned.has(item)) {
             this.scanned.set(item, this.scanned.get(item) + 1)
         } else {
-            this.scanned.set(item,  1)
+            this.scanned.set(item, 1)
         }
         return this
     }
 
-    total() {
+    total() {
         let total = 0
         for (let [item, totalItems] of this.scanned.entries()) {
             var product = this.pricingRules.find(product => product.code === item);
-            if (product.deal != null){
+            if (product.deal != null) {
                 total += deals[product.deal](product.dealProperties, totalItems)
-            }else{
+            } else {
                 total += product.price * totalItems
             }
 

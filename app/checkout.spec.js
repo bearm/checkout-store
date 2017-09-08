@@ -7,7 +7,7 @@ let chai = require('chai'),
 
 chai.should();
 
-let Checkout = require(path.join(__dirname + "/app", '..', 'checkout'));
+let Checkout = require(path.join(__dirname + "/app", '..', 'checkOut'));
 
 describe('Testing checkout', () => {
     let checkout;
@@ -16,7 +16,7 @@ describe('Testing checkout', () => {
         checkout = new Checkout(pricingRules);
     });
 
-    describe('Testing scan system', () => {
+    describe('Testing scan system Examples', () => {
         it("Items: VOUCHER, TSHIRT, MUG should be equal to 32.50€", () => {
             checkout.scan("VOUCHER").scan("TSHIRT").scan("MUG")
             checkout.total().should.equal("32.50€")

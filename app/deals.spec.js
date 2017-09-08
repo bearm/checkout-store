@@ -5,7 +5,7 @@ chai.should()
 
 describe('Testing deals', () => {
     describe('BuyTake Deal', () => {
-        it("Should return the 5 for a total number of 2", () => {
+        it("Should return the 5 for a total number of 2", () => {
             let item = {
                 "code": "VOUCHER",
                 "name": "Cabify Voucher",
@@ -22,7 +22,7 @@ describe('Testing deals', () => {
         })
     })
     describe('Bulk Deal', () => {
-        it("Should return the 5 for a total number of 2", () => {
+        it("Should return the 5 for a total number of 2", () => {
             let item = {
                 "code": "TSHIRT",
                 "name": "Cabify T-Shirt",
