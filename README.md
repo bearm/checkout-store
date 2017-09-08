@@ -8,7 +8,7 @@ Various departments have insisted on the following discounts:
 
 Checkout process allows for items to be scanned in any order, and should return the total amount to be paid. Using ES6, implement a checkout process that fulfills the requirements.
 
-## :computer: Solution:
+## :bulb: Solution:
 
 The checkout class only has to function, scan and total, the constructor receives a JSON that ideally:
  * Should come from an API
