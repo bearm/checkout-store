@@ -11,8 +11,7 @@ Checkout process allows for items to be scanned in any order, and should return 
 ## :computer: Stack used:
 
 * ES6 JavaScript.
-* [Gulp](https://gulpjs.com/)
-* [Karma](https://karma-runner.github.io/1.0/index.html)
+* [Babel](https://babeljs.io/)
 * [Mocha](https://mochajs.org/")
 * [Chai](http://chaijs.com/)
 
