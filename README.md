@@ -12,7 +12,7 @@ Checkout process allows for items to be scanned in any order, and should return 
 
 The checkout class only has two functions, scan and total, the constructor receives a JSON called pricingRules that ideally:
  * Should come from an API
- * Requested with some promise in the checkout constructor
+ * Requested with some promise in the checkout constructor or in the js that uses the checkout class
  * And created by an admin panel or something.
  * This objects can also bring more information as the size color etc, as is basically a json of the products that we are selling
 
