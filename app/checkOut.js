@@ -7,9 +7,7 @@ class Checkout {
         this.pricingRules = pricingRules
         this.scanned = new Map()
     }
-    get items(){
-        return this.scanned
-    }
+
     scan(item) {
         if (this.pricingRules.some(product => product.code === item)) {
             if (this.scanned.has(item)) {
@@ -26,7 +24,7 @@ class Checkout {
         for (let [item, totalItems] of this.scanned.entries()) {
             var product = this.pricingRules.find(product => product.code === item);
             if (product.deal != null) {
-                total += deals[product.deal](product.dealProperties, totalItems)
+                total += deals[product.deal](product.price, product.dealProperties, totalItems)
             } else {
                 total += product.price * totalItems
             }

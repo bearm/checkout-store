@@ -10,10 +10,11 @@ Checkout process allows for items to be scanned in any order, and should return 
 
 ## :bulb: Solution:
 
-The checkout class only has two functions, scan and total, the constructor receives a JSON that ideally:
+The checkout class only has two functions, scan and total, the constructor receives a JSON called pricingRules that ideally:
  * Should come from an API
  * Requested with some promise in the checkout constructor
  * And created by an admin panel or something.
+ * This objects can also bring more information as the size color etc, as is basically a json of the products that we are selling
 
 And uses the deal variable where al the deal functions are assigned, each deal should be declared independently so they can be reused along the project if this gets bigger.
 

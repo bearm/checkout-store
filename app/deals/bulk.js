@@ -1,4 +1,4 @@
-const bulk = ({price, limit, bulkPrice} = {}, total) => {
+const bulk = (price, {limit, bulkPrice} = {}, total) => {
     if (total >= limit) {
         return total * bulkPrice
     }

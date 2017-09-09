@@ -8,9 +8,9 @@ describe('Testing deals', () => {
         let item = {
             "code": "VOUCHER",
             "name": "Cabify Voucher",
+            "price": 5,
             "deal": "buyTake",
             "dealProperties": {
-                "price": 5,
                 "take": 3,
                 "buy": 2
             },
@@ -18,26 +18,31 @@ describe('Testing deals', () => {
         }
         it("Should return the total units per price if the total is lower than take ", () => {
             let total = 1
-            deals.buyTake(item.dealProperties, total).should.equal(5)
+            deals.buyTake(item.price, item.dealProperties, total).should.equal(5)
             total = 2
-            deals.buyTake(item.dealProperties, total).should.equal(10)
+            deals.buyTake(item.price, item.dealProperties, total).should.equal(10)
         })
         it("Should apply the promo if the buy and takes matches", () => {
             let total = 3
-            deals.buyTake(item.dealProperties, total).should.equal(10)
+            deals.buyTake(item.price, item.dealProperties, total).should.equal(10)
         })
         it("Should apply the promo if the buy and takes matches and add the ones that doesnt match", () => {
             let total = 4
-            deals.buyTake(item.dealProperties, total).should.equal(15)
+            deals.buyTake(item.price, item.dealProperties, total).should.equal(15)
+        })
+        it("Take can not be 0 if we want to apply the deal discount", () => {
+            let total = 3
+            item.dealProperties["take"] = 0
+            deals.buyTake(item.price, item.dealProperties, total).should.equal(15)
         })
     })
     describe('Bulk Deal', () => {
         let item = {
             "code": "TSHIRT",
             "name": "Cabify T-Shirt",
+            "price": 20,
             "deal": "bulk",
             "dealProperties": {
-                "price": 20,
                 "limit": 10,
                 "bulkPrice": 19
             },
@@ -45,11 +50,11 @@ describe('Testing deals', () => {
         }
         it("Should the price per number of items if it is lower than the bulk limit", () => {
             let total = 5
-            deals.bulk(item.dealProperties, total).should.equal(100)
+            deals.bulk(item.price, item.dealProperties, total).should.equal(100)
         })
         it("Should the apply the bulk price if the number of items is bigger than the bulk limit", () => {
             let total = 20
-            deals.bulk(item.dealProperties, total).should.equal(380)
+            deals.bulk(item.price, item.dealProperties, total).should.equal(380)
         })
     })
 });

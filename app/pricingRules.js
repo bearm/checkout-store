@@ -2,9 +2,9 @@ const pricingRules = [
     {
         "code": "VOUCHER",
         "name": "Cabify Voucher",
+        "price": 5,
         "deal": "buyTake",
         "dealProperties": {
-            "price": 5,
             "take": 2,
             "buy": 1
         },
@@ -14,9 +14,9 @@ const pricingRules = [
     {
         "code": "TSHIRT",
         "name": "Cabify T-Shirt",
+        "price": 20,
         "deal": "bulk",
         "dealProperties": {
-            "price": 20,
             "limit": 3,
             "bulkPrice": 19
         },
@@ -25,8 +25,8 @@ const pricingRules = [
     {
         "code": "MUG",
         "name": "Cafify Coffee Mug",
-        "deal": null,
         "price": 7.5,
+        "deal": null,
         "productDetails": "red"
     }
 ];

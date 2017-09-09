@@ -51,6 +51,10 @@ describe('Testing checkout', () => {
             checkout.scan("VOUCHER")
             checkout.total().should.equal("5.00€")
         })
+        it("Should return the price of the scanned if the deal property is null", () => {
+            checkout.scan("MUG")
+            checkout.total().should.equal("7.50€")
+        })
         it("Should return the price of the scanned if they do not matches any deal multiple example", () => {
             checkout
                 .scan("MUG")
